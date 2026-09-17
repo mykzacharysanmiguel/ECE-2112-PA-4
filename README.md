@@ -1,5 +1,4 @@
 # ECE-2112-PA-4
-# ECE-2112-PA-3
 
 **Made by: Myk Zachary Marcian M. San Miguel | 2ECE-D 2026-'27**
 
@@ -17,7 +16,7 @@ import matplotlib.pyplot
 
 ## Part A: Positional and Label-Based Slicing
 ### Objective
-Create a DataFrame named `Viscomm` that contains student whose `Track` is `Communication`. Retain only these columns, in the order of `Name`, `Gender`, `Math`, `Electronics`, `Average`
+Create a DataFrame named `VisComm` that contains student whose `Track` is `Communication`. Retain only these columns, in the order of `Name`, `Gender`, `Math`, `Electronics`, `Average`
 ### Discussion
 
 ## Part B: Model Lookup
@@ -27,6 +26,9 @@ Create a second DataFrame named `VisFemale` containing student whose `Hometown` 
 
 ## Part C: Multi-Model Subsetting
 ### Objective
+- Compute the mean of `Average` for every category using Pandas
+- Display the three summary tables
+- Write three statements identifying the category with the highest sample mean for each feature 
 ### Discussion
 
 ---
