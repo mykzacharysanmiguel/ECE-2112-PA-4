@@ -18,16 +18,32 @@ import matplotlib.pyplot
 ### Objective
 Create a DataFrame named `VisComm` that contains student whose `Track` is `Communication`. Retain only these columns, in the order of `Name`, `Gender`, `Math`, `Electronics`, `Average`
 ### Discussion
+- For the first line
+```python
+data = pd.read_excel('board2.xlsx')
+data['Average']=((data['Math'])+(data['Electronics'])+(data['GEAS'])+(data['Communication']))/4
+
+VisComm = data.loc[(data['Track']=='Communication')&(data['Hometown']=='Visayas'), ['Name', 'Gender', 'Math', 'Electronics', 'Average']]
+display(VisComm)
+print('Number of Rows: ', len(VisComm))
+```
 
 ## Part B: Model Lookup
 ### Objective
 Create a second DataFrame named `VisFemale` containing student whose `Hometown` is `Visayas` and whose `Gender` is `Female`. Retain the `Name`, `Track`, `GEAS`, `Electronics`, `Average`
 ### Discussion
+```python
+VisFemale = data.loc[(data['Gender']=='Female')&(data['Hometown'])=='Visayas'),['Name','Track','GEAS','Electronics','Average']]
+display(VisFemale)
+
+display(VisFemale.loc[VisFemale['Average']>=60])
+```
 
 ## Part C: Multi-Model Subsetting
 ### Objective
 - Compute the mean of `Average` for every category using Pandas
 - Display the three summary tables
+- Create one figure that contains the three bar charts which contain the `Average` by `Track`, by `Gender`, and by `Hometown`
 - Write three statements identifying the category with the highest sample mean for each feature 
 ### Discussion
 
@@ -36,3 +52,5 @@ Create a second DataFrame named `VisFemale` containing student whose `Hometown` 
 
 ## History 
 **September 16, 2026** - This repository was created and initial .ipynb file was uploaded\
+
+**September 17, 2026** - The README and .ipynb file were revised
