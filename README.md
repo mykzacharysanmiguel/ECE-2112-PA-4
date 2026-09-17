@@ -53,4 +53,6 @@ display(VisFemale.loc[VisFemale['Average']>=60])
 ## History 
 **September 16, 2026** - This repository was created and initial .ipynb file was uploaded\
 
-**September 17, 2026** - The README and .ipynb file were revised
+**September 17, 2026** - Added the excel file and the README as well as the .ipynb file were revised
+
+**September 18, 2026** - The README and .ipynb file were further revised and beautified
