@@ -33,7 +33,7 @@ The second line basically just gets the average grades from the four subjects wh
 
 This gets the data of students with a Communications Track and a Hometown of Visayas. Then only their `Name`, `Gender`, grades in `Math`, `Electronics`, as well as their `Average` grade.
 
-Now that were done with getting the required data, we will then output the obtained data. The entire code should look like:
+Now that we're done getting the required data, we will output the obtained data. The entire code should look like:
 
 ```python
 data = pd.read_excel('board2.xlsx')
@@ -50,6 +50,18 @@ print('Number of Rows: ', len(VisComm))
 ### Objective
 Create a second DataFrame named `VisFemale` containing students whose `Hometown` is `Visayas` and whose `Gender` is `Female`. Retain the `Name`, `Track`, `GEAS`, `Electronics`, `Average`
 ### Discussion
+**Functions used:**
+- `.loc[row_indexer, column_indexer]` - selects the rows and columns by their index or by their name
+
+> `VisFemale = data.loc[(data['Gender']=='Female')&(data['Hometown'])=='Visayas'),['Name','Track','GEAS','Electronics','Average']]`
+
+Using the `.loc` function and boolean operators, we will select students who are `Female` and are from `Visayas`. After this, we would display only the required data: their `Name`, `Track`, `GEAS`, `Electronics`, and `Average`. We would assign this DataFrame to a variable named `VisFemale`.
+> `display(VisFemale)`
+
+This just displays the DataFrame that we've just made
+> `display(VisFemale.loc[VisFemale['Average']>=60])`
+
+Using the `.loc` function and boolean operators, we would just select the people in the function `VisFemale` with an average of greater than or equal to 60
 ```python
 VisFemale = data.loc[(data['Gender']=='Female')&(data['Hometown'])=='Visayas'),['Name','Track','GEAS','Electronics','Average']]
 display(VisFemale)
