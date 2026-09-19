@@ -76,6 +76,21 @@ display(VisFemale.loc[VisFemale['Average']>=60])
 - Create one figure that contains the three bar charts which contain the `Average` by `Track`, by `Gender`, and by `Hometown`
 - Write three statements identifying the category with the highest sample mean for each feature 
 ### Discussion
+**Functions used:**
+- `.pivot_table(index,values,aggfunc)` - this function summarizes or reshapes large DataFrames
+- `.reset_index()` - this resets the index of a dataset and converts your old index into a standard sequential column
+- `plt.subplots()`
+- `.bar()`
+- `.set()`
+- `.text()`
+- `plt.show()`
+
+> `trackM = data.pivot_table(index='Track',values='Average',aggfunc='mean').reset_index()`
+
+The function and processes used in the first 3 lines is the same, using the function `.pivot_table(index,values,aggfunc='mean')`, we would input name of the column that we wanted to select in `index` so that we could perform some functions or equations on them. After that, we would input the column name where the numerical values of the _index_ are stored, into `values`. Since we wanted to get the average/mean of this _values_, would use `aggfunc='mean'` to achieve this. Moreover, we would use `.reset_index()` fucntion to reset their column index to make them look more organized and clean. After acheiving this, we would assign them to their respective arbitrary variables.
+> `display(trackM, genderM, hometownM)`
+
+This displays the resulting DataFrame of our `.pivot_table()` function. We would call them using the arbitrary variables in which they’re assigned to.
 ```python
 trackM = data.pivot_table(index='Track',values='Average',aggfunc='mean').reset_index()
 genderM = data.pivot_table(index='Gender',values='Average',aggfunc='mean').reset_index()
@@ -106,3 +121,5 @@ plt.show()
 **September 17, 2026** - Added the excel file and the README as well as the .ipynb file were revised
 
 **September 18, 2026** - The README and .ipynb file were further revised and beautified
+
+**September 20, 2026** - Added more infos in the README file
